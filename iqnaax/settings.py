@@ -3,9 +3,16 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# SECRET_KEY = 'django-insecure-#lpyxfbgvu(yzw7md1dn8slhht06@m=^j)$m#*%_f&4n^vse!v'
+
+# DEBUG = True
+
+# ALLOWED_HOSTS = []
+
 
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
@@ -16,7 +23,7 @@ ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 INSTALLED_APPS = [
 
-    'cloudinary_storage',
+    
     'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -32,14 +39,10 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'contact.apps.ContactConfig',
     'account.apps.AccountConfig',
-    'cloudinary',
+    
 ]
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'drn7wxgml',
-    'API_KEY': '238472879233522',
-    'API_SECRET': 'F9jTJye5OjgU1QcqQ9btEsMoczo',
-}
+
 
 MIDDLEWARE = [
    
@@ -108,12 +111,10 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-STATICFILES_DIRS = [BASE_DIR / 'static']
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
