@@ -3,13 +3,6 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECRET_KEY = 'django-insecure-#lpyxfbgvu(yzw7md1dn8slhht06@m=^j)$m#*%_f&4n^vse!v'
-
-# DEBUG = True
-
-# ALLOWED_HOSTS = []
-
-
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
@@ -18,6 +11,15 @@ DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+
+
+
+
+# SECRET_KEY = 'django-insecure-#lpyxfbgvu(yzw7md1dn8slhht06@m=^j)$m#*%_f&4n^vse!v'
+
+# DEBUG = True
+
+# ALLOWED_HOSTS = []
 
 
 
@@ -111,6 +113,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # MEDIA_URL = '/media/'
