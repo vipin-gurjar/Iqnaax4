@@ -1,9 +1,9 @@
 
-from django.conf import settings
-from django.conf.urls.static import static
+# from django.conf import settings
+# from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path,include
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+# from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 admin.site.site_header = " <=> IQNAAX Admin Panel <=>"
 admin.site.site_title = "Iqnaax Admin "
@@ -19,8 +19,6 @@ urlpatterns = [
     path('contact/', include("contact.urls")),
     path('', include("account.urls")),
     path('admin/', admin.site.urls),
-   
-   
 ]  
 
 
