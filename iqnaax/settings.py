@@ -3,25 +3,11 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = 'django-insecure-#lpyxfbgvu(yzw7md1dn8slhht06@m=^j)$m#*%_f&4n^vse!v'
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+DEBUG = True
 
-
-DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
-
-
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
-
-
-
-
-# SECRET_KEY = 'django-insecure-#lpyxfbgvu(yzw7md1dn8slhht06@m=^j)$m#*%_f&4n^vse!v'
-
-# DEBUG = True
-
-# ALLOWED_HOSTS = []
-
-
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     
@@ -113,35 +99,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-   
+    BASE_DIR / "static"
 ]
-STATIC_ROOT = "/var/www/example.com/static/"
 
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
+MEDIA_URL = '/media/'
 
-#     os.path.join(BASE_DIR, 'home/static')
-# ]
-
-
-# if not DEBUG:
-    # Tell Django to copy statics to the `staticfiles` directory
-    # in your application directory on Render.
-    # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
-
-    
-# STATICFILES_DIRS=[os.path.join(BASE_DIR,"static"), "templates"]
+# STATIC_ROOT = "/var/www/example.com/static/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -164,7 +127,6 @@ TINYMCE_DEFAULT_CONFIG = {
 
 JAZZMIN_SETTINGS = {
     "welcome_sign" : "Welcome to IQNAAX Admin",
-  
 }
 
 
