@@ -1,15 +1,13 @@
 
-# from django.conf import settings
-# from django.conf.urls.static import static
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path,include,re_path
 from django.views.static import serve
-# from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 admin.site.site_header = " <=> IQNAAX Admin Panel <=>"
 admin.site.site_title = "Iqnaax Admin "
 admin.site.index_title = "Welcome to Iqnaax Admin Panel"
-
 
 urlpatterns = [
     path('', include("home.urls")),
