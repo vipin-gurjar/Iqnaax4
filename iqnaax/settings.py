@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-#lpyxfbgvu(yzw7md1dn8slhht06@m=^j)$m#*%_f&4n^vse!v'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'contact.apps.ContactConfig',
     'account.apps.AccountConfig',
-    
 ]
 
 
@@ -112,13 +111,11 @@ STATICFILES_DIRS=[
 
 STATIC_ROOT=(BASE_DIR/ 'static')
 
-# MEDIA_URL='/media/'
-# MEDIA_ROOT=(BASE_DIR/ 'media')
-
-MEDIA_ROOT = '/opt/render/project/src/'
-MEDIA_URL = '/media/'
+MEDIA_URL='/media/'
+MEDIA_ROOT=(BASE_DIR/ 'media')
 
 # STATIC_ROOT = "/var/www/example.com/static/"
+# MEDIA_ROOT = '/opt/render/project/src/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
