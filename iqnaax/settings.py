@@ -40,7 +40,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-     "whitenoise.middleware.WhiteNoiseMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'iqnaax.urls'
@@ -48,7 +48,7 @@ ROOT_URLCONF = 'iqnaax.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -99,11 +99,14 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
+
+STATICFILES_DIRS=[
+    (BASE_DIR/ 'static')
 ]
 
-MEDIA_URL = '/media/'
+STATIC_ROOT=(BASE_DIR/ 'static')
+
+MEDIA_URL='/media/'
 
 # STATIC_ROOT = "/var/www/example.com/static/"
 
