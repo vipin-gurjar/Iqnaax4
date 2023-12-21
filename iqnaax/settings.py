@@ -112,8 +112,11 @@ STATICFILES_DIRS=[
 
 STATIC_ROOT=(BASE_DIR/ 'static')
 
-MEDIA_URL='/media/'
-MEDIA_ROOT=(BASE_DIR/ 'media')
+# MEDIA_URL='/media/'
+# MEDIA_ROOT=(BASE_DIR/ 'media')
+
+MEDIA_ROOT = '/opt/render/project/src/'
+MEDIA_URL = '/media/'
 
 # STATIC_ROOT = "/var/www/example.com/static/"
 
