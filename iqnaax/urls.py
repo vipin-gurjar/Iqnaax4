@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.urls import path,include,re_path
 from django.views.static import serve
 
-admin.site.site_header = " <=> IQNAAX Admin Panel <=>"
+admin.site.site_header = "IQNAAX Admin Panel"
 admin.site.site_title = "Iqnaax Admin "
 admin.site.index_title = "Welcome to Iqnaax Admin Panel"
 
