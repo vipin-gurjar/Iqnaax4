@@ -63,17 +63,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'iqnaax.wsgi.application'
 
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-# postgres://iqnaax_db_user:GGSt50HFs6NkhGmvrWcchrVZIYfRylos@dpg-cm1u40fqd2ns73d66710-a.oregon-postgres.render.com/iqnaax_db
-DATABASES["default"]=dj_database_url.parse("postgres://iqnaax_db_user:GGSt50HFs6NkhGmvrWcchrVZIYfRylos@dpg-cm1u40fqd2ns73d66710-a/iqnaax_db")
 
 
 
