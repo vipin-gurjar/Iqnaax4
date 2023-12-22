@@ -33907,11 +33907,11 @@ header .onhover-dropdown .onhover-div .price-box {
 }
 
 .about-us-images3 {
-    background-image: linear-gradient(rgb(20 20 20 / 52%),rgb(0 0 0 / 34%)),url(http://iqnaax.com/images/about-us-slider.jpeg);
+    background-image: linear-gradient(rgb(20 20 20 / 52%),rgb(0 0 0 / 34%)),url(../images/about-us-slider.jpeg);
     background-size: cover;
 }
 .about-us-images9{
-       background-image: linear-gradient(rgb(20 20 20 / 52%),rgb(0 0 0 / 34%)),url(http://iqnaax.com/images/9qdss.jpeg);
+       background-image: linear-gradient(rgb(20 20 20 / 52%),rgb(0 0 0 / 34%)),url(../images/9qdss.jpeg);
     background-size: cover; 
 }
 .about-us-images10{
