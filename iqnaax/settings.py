@@ -114,9 +114,6 @@ STATIC_ROOT=(BASE_DIR/ 'static')
 MEDIA_URL='/media/'
 MEDIA_ROOT=(BASE_DIR/ 'media')
 
-# STATIC_ROOT = "/var/www/example.com/static/"
-# MEDIA_ROOT = '/opt/render/project/src/'
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/profile/'
