@@ -70,6 +70,8 @@ DATABASES = {
     }
 }
 
+#postgres://iqnaax_online_db_user:Jh4wbEyeOcOotB6YTDQzrdiQ5yGBxWaW@dpg-cm2i89la73kc73eico1g-a.oregon-postgres.render.com/iqnaax_online_db
+DATABASES["default"]=dj_database_url.parse("postgres://iqnaax_online_db_user:Jh4wbEyeOcOotB6YTDQzrdiQ5yGBxWaW@dpg-cm2i89la73kc73eico1g-a.oregon-postgres.render.com/iqnaax_online_db")
 
 
 AUTH_PASSWORD_VALIDATORS = [
