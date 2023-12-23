@@ -7,7 +7,7 @@ class Blog_Content(models.Model):
     blogImg = models.ImageField(upload_to='Blog Images')
     
     def __str__(self):
-        return str(self.id)
+        return str(self.title)
     
     
 class Blog1_Details_conent(models.Model):
