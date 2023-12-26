@@ -1,10 +1,12 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 class Blog_Content(models.Model):
     title = models.CharField(max_length=200)
     desc = models.TextField()
     date = models.DateField()
-    blogImg = models.ImageField(upload_to='Blog Images')
+    blogImg = CloudinaryField('Blog Images')
+   
     
     def __str__(self):
         return str(self.title)
