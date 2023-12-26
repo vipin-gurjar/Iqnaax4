@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Banner(models.Model):
@@ -17,8 +18,8 @@ class About_Section(models.Model):
         return str(self.id)
     
 class About_Section_Images(models.Model):
-    aboutImg = models.ImageField(upload_to='AboutSec Images')
-    
+    aboutImg = CloudinaryField('AboutSec Images')
+  
     def __str__(self):
         return str(self.id)    
 
@@ -84,7 +85,8 @@ class Testimonial(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=200)
     desc = models.TextField()
-    blogImg = models.ImageField(upload_to='Blog Images')
+    blogImg = CloudinaryField('Blog Images')
+
     
     def __str__(self):
         return str(self.id)
