@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -16,7 +17,8 @@ class Lab_Setup(models.Model):
     title = models.CharField(max_length=100)
     selling_price = models.FloatField()
     discounted_price = models.FloatField()
-    lab_image = models.ImageField(upload_to='Lab images')
+    lab_image = CloudinaryField('Lab images')
+
 
     def __str__(self):
         return str(self.title)    
