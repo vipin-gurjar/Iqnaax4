@@ -1,5 +1,8 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Gallery_Images(models.Model):
-    images = models.ImageField(upload_to='Gallery Images')
+    images = CloudinaryField('Gallery Images')
+    
+   
