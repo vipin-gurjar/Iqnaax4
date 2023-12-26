@@ -6,4 +6,5 @@ psycopg2-binary
 dj-database-url
 django-jazzmin
 django-tinymce
+cloudinary==1.37.0
 
