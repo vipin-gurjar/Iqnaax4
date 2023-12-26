@@ -1,5 +1,6 @@
 from django.db import models
 from tinymce.models import HTMLField
+from cloudinary.models import CloudinaryField
 
 # Create your models here.    
 class We_Different(models.Model):
@@ -14,7 +15,7 @@ class About_Area_Content(models.Model):
     content = HTMLField()
     
 class About_image_gallery(models.Model):
-    about_img_gallery = models.ImageField(upload_to='About_image_gallery')
+    about_img_gallery = CloudinaryField('About_image_gallery')
     
     def __str__(self):
         return str(self.id)
