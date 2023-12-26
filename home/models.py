@@ -5,7 +5,8 @@ from cloudinary.models import CloudinaryField
 class Banner(models.Model):
     title = models.CharField(max_length=200)
     desc = models.TextField()
-    bannerImg = models.ImageField(upload_to='Banner Images')
+    bannerImg = CloudinaryField('Banner Images')
+  
     
     def __str__(self):
         return str(self.id)
@@ -50,7 +51,8 @@ class Campus_Image(models.Model):
 class Feature(models.Model):
     title = models.CharField(max_length=200)
     desc = models.TextField()
-    icon = models.ImageField(upload_to='Feature Icon')
+    icon = CloudinaryField('Feature Icon')
+   
     
     def __str__(self):
         return str(self.id)
@@ -67,7 +69,8 @@ class Why_Choose_Box(models.Model):
     count = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     desc = models.TextField()
-    icon_img = models.ImageField(upload_to='Why Choose img')
+    icon_img = CloudinaryField('Why Choose img')
+  
  
     
     def __str__(self):
