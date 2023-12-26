@@ -8,7 +8,7 @@ class Steam_Product(models.Model):
     title = models.CharField(max_length=100)
     selling_price = models.FloatField()
     discounted_price = models.FloatField()
-    product_image = models.ImageField(upload_to='Steam Product images')
+    product_image = CloudinaryField('Steam Product images')
 
     def __str__(self):
         return str(self.title)
