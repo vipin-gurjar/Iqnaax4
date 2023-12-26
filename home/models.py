@@ -40,13 +40,15 @@ class Gallery_Section(models.Model):
         return str(self.id)
     
 class Gallery_Images(models.Model):
-    galleryImg = models.ImageField(upload_to='Gallery_Section Images')
+    galleryImg = CloudinaryField('Gallery_Section Images')
+  
     
     def __str__(self):
         return str(self.id)
     
 class Campus_Image(models.Model):
-    campusImg = models.ImageField(upload_to='Campus_Images') 
+    campusImg = CloudinaryField('Campus_Images')
+  
     
 class Feature(models.Model):
     title = models.CharField(max_length=200)
@@ -80,7 +82,8 @@ class Testimonial(models.Model):
     title = models.CharField(max_length=200)
     subtitle = models.CharField(max_length=200)
     desc = models.TextField()
-    testimonialImg = models.ImageField(upload_to='Testimonial Images')
+    testimonialImg = CloudinaryField('Testimonial Images')
+  
     
     def __str__(self):
         return str(self.id)
@@ -95,7 +98,7 @@ class Blog(models.Model):
         return str(self.id)
     
 class Home_about_Image(models.Model):
-    home_about_img = models.ImageField(upload_to='Home_about_images')
+    home_about_img = CloudinaryField('Home_about_images')
     alt_text = models.CharField(max_length=255)
     
     def __str__(self):
