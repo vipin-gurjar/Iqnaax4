@@ -4,6 +4,10 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 SECRET_KEY = 'django-insecure-#lpyxfbgvu(yzw7md1dn8slhht06@m=^j)$m#*%_f&4n^vse!v'
 
 DEBUG = True
@@ -27,6 +31,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'contact.apps.ContactConfig',
     'account.apps.AccountConfig',
+    'cloudinary',
 ]
 
 
@@ -132,6 +137,15 @@ TINYMCE_DEFAULT_CONFIG = {
 JAZZMIN_SETTINGS = {
     "welcome_sign" : "Welcome to IQNAAX Admin",
 }
+
+cloudinary.config(
+
+  cloud_name = "drn7wxgml", 
+  api_key = "238472879233522", 
+  api_secret = "F9jTJye5OjgU1QcqQ9btEsMoczo",
+  secure = True
+  
+)
 
 
 
