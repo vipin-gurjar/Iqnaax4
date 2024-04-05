@@ -75,8 +75,11 @@ DATABASES = {
     }
 }
 
+#postgres://iqnaaxdb_9hgq_user:xsgRPksjV4tXunjagWjutHNJYWI8p5Vc@dpg-co7u09kf7o1s738mku20-a.oregon-postgres.render.com/iqnaaxdb_9hgq
+DATABASES["default"]=dj_database_url.parse("postgres://iqnaaxdb_9hgq_user:xsgRPksjV4tXunjagWjutHNJYWI8p5Vc@dpg-co7u09kf7o1s738mku20-a.oregon-postgres.render.com/iqnaaxdb_9hgq")
+
 #postgres://iqnaax_online_db_user:Jh4wbEyeOcOotB6YTDQzrdiQ5yGBxWaW@dpg-cm2i89la73kc73eico1g-a.oregon-postgres.render.com/iqnaax_online_db
-DATABASES["default"]=dj_database_url.parse("postgres://iqnaax_online_db_user:Jh4wbEyeOcOotB6YTDQzrdiQ5yGBxWaW@dpg-cm2i89la73kc73eico1g-a/iqnaax_online_db")
+#DATABASES["default"]=dj_database_url.parse("postgres://iqnaax_online_db_user:Jh4wbEyeOcOotB6YTDQzrdiQ5yGBxWaW@dpg-cm2i89la73kc73eico1g-a/iqnaax_online_db")
 
 
 AUTH_PASSWORD_VALIDATORS = [
